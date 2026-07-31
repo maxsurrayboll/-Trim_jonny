@@ -41,6 +41,43 @@ app.get("/ruta4", (req, res)=> {
     `);
     })
 
+// Taller: Hacer LOS 3 PRIMEROS 
+
+//Punto 1
+app.get("/ruta1taller/:saludo/:nombre", (req, res) =>
+{
+    const saludo = req.params.saludo;
+    const nombre = req.params.nombre;
+    res.json({
+        saludo,
+        nombre
+    })
+})
+
+// Punto 2
+app.get("/ruta2taller/:productos/:nombre", (req, res) => {
+    const productos = req.params.productos;
+    const nombre = req.params.nombre;
+
+    res.json({
+        productos,
+        nombre
+    });
+});
+
+//Punto 3
+app.get("/ruta3taller", (req, res) => {
+    const productos = req.query.productos || "Frijoles";
+    const categoria = req.query.categoria || "Granos";
+    const id = req.query.id || 66;
+
+    res.json({
+        productos,
+        categoria,
+        id
+    });
+});
+
 
 
 app.listen(port, () => {
