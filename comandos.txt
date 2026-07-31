@@ -1,0 +1,10 @@
+INICIAR SERVIDOR
+node app.js
+
+PARA INSTALAR 
+npm install nombre_dependencia
+npm install
+
+GIT
+crear rama: git branch nombre_dependencia
+crear rama y pasarse a ella: git 
